@@ -268,7 +268,7 @@ class Detect:
         
 
     # 运行主函数
-    def img_process_main(self,count):
+    def img_process_main(self):
         prior = 3
         start = datetime.datetime.now()   
         # 找到红色区域
@@ -386,7 +386,7 @@ class Detect:
         # cv2.waitKey(1)         
         end = datetime.datetime.now()
         time = (end - start).microseconds
-        return key_length,key_angle
+        return key_length,key_angle,self.work_img
 
 if __name__ == '__main__':
     root_path = '../image'    #实际图片存放的位置
